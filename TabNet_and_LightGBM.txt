@@ -1,0 +1,166 @@
+Veri yükleniyor ve ön işleme yapılıyor...
+
+==================================================
+ LIGHTGBM OPTİMİZASYONU VE EĞİTİMİ BAŞLIYOR
+==================================================
+[I 2026-03-24 20:03:52,040] A new study created in memory with name: no-name-f6022dc8-847b-4b73-b051-308fcb36912f
+[LightGBM] [Fatal] bin size 3987 cannot run on GPU
+[W 2026-03-24 20:03:56,874] Trial 0 failed with parameters: {'n_estimators': 923, 'learning_rate': 0.08113188108019054, 'num_leaves': 104, 'max_depth': 8, 'reg_lambda': 0.008580572372320516} because of the following error: LightGBMError('bin size 3987 cannot run on GPU').
+Traceback (most recent call last):
+  File "C:\SagliktaAI_Projesi\ai_env\lib\site-packages\optuna\study\_optimize.py", line 206, in _run_trial
+    value_or_values = func(trial)
+  File "C:\SagliktaAI_Projesi\train_lgbm_tabnet.py", line 96, in lgbm_objective
+    model.fit(X_tr, y_tr, categorical_feature=categorical_cols)
+  File "C:\SagliktaAI_Projesi\ai_env\lib\site-packages\lightgbm\sklearn.py", line 1560, in fit
+    super().fit(
+  File "C:\SagliktaAI_Projesi\ai_env\lib\site-packages\lightgbm\sklearn.py", line 1049, in fit
+    self._Booster = train(
+  File "C:\SagliktaAI_Projesi\ai_env\lib\site-packages\lightgbm\engine.py", line 297, in train
+    booster = Booster(params=params, train_set=train_set)
+  File "C:\SagliktaAI_Projesi\ai_env\lib\site-packages\lightgbm\basic.py", line 3660, in __init__
+    _safe_call(
+  File "C:\SagliktaAI_Projesi\ai_env\lib\site-packages\lightgbm\basic.py", line 313, in _safe_call
+    raise LightGBMError(_LIB.LGBM_GetLastError().decode("utf-8"))
+lightgbm.basic.LightGBMError: bin size 3987 cannot run on GPU
+[W 2026-03-24 20:03:56,886] Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "C:\SagliktaAI_Projesi\train_lgbm_tabnet.py", line 103, in <module>
+    study_lgbm.optimize(lgbm_objective, n_trials=10) # Süreyi kısaltmak için 10 deneme
+  File "C:\SagliktaAI_Projesi\ai_env\lib\site-packages\optuna\study\study.py", line 490, in optimize
+    _optimize(
+  File "C:\SagliktaAI_Projesi\ai_env\lib\site-packages\optuna\study\_optimize.py", line 68, in _optimize
+    _optimize_sequential(
+  File "C:\SagliktaAI_Projesi\ai_env\lib\site-packages\optuna\study\_optimize.py", line 165, in _optimize_sequential
+    frozen_trial_id = _run_trial(study, func, catch)
+  File "C:\SagliktaAI_Projesi\ai_env\lib\site-packages\optuna\study\_optimize.py", line 263, in _run_trial
+    raise func_err
+  File "C:\SagliktaAI_Projesi\ai_env\lib\site-packages\optuna\study\_optimize.py", line 206, in _run_trial
+    value_or_values = func(trial)
+  File "C:\SagliktaAI_Projesi\train_lgbm_tabnet.py", line 96, in lgbm_objective
+    model.fit(X_tr, y_tr, categorical_feature=categorical_cols)
+  File "C:\SagliktaAI_Projesi\ai_env\lib\site-packages\lightgbm\sklearn.py", line 1560, in fit
+    super().fit(
+  File "C:\SagliktaAI_Projesi\ai_env\lib\site-packages\lightgbm\sklearn.py", line 1049, in fit
+    self._Booster = train(
+  File "C:\SagliktaAI_Projesi\ai_env\lib\site-packages\lightgbm\engine.py", line 297, in train
+    booster = Booster(params=params, train_set=train_set)
+  File "C:\SagliktaAI_Projesi\ai_env\lib\site-packages\lightgbm\basic.py", line 3660, in __init__
+    _safe_call(
+  File "C:\SagliktaAI_Projesi\ai_env\lib\site-packages\lightgbm\basic.py", line 313, in _safe_call
+    raise LightGBMError(_LIB.LGBM_GetLastError().decode("utf-8"))
+lightgbm.basic.LightGBMError: bin size 3987 cannot run on GPU
+
+(ai_env) C:\SagliktaAI_Projesi>python train_lgbm_tabnet.py
+Veri yükleniyor ve ön işleme yapılıyor...
+
+==================================================
+ LIGHTGBM OPTİMİZASYONU VE EĞİTİMİ BAŞLIYOR
+==================================================
+[I 2026-03-24 20:08:11,121] A new study created in memory with name: no-name-e4bee6b2-9abb-48b0-923e-f79a213b4277
+[I 2026-03-24 20:14:01,105] Trial 0 finished with value: 0.6034001087952124 and parameters: {'n_estimators': 781, 'learning_rate': 0.010791803329140039, 'num_leaves': 129, 'max_depth': 10, 'reg_lambda': 2.1398147271962795}. Best is trial 0 with value: 0.6034001087952124.
+[I 2026-03-24 20:17:22,377] Trial 1 finished with value: 0.5983759371738673 and parameters: {'n_estimators': 495, 'learning_rate': 0.018163140840961465, 'num_leaves': 147, 'max_depth': 8, 'reg_lambda': 0.04252765220523233}. Best is trial 0 with value: 0.6034001087952124.
+[I 2026-03-24 20:18:25,302] Trial 2 finished with value: 0.5860469868092028 and parameters: {'n_estimators': 544, 'learning_rate': 0.1992325578221765, 'num_leaves': 65, 'max_depth': 5, 'reg_lambda': 0.08311022769124296}. Best is trial 0 with value: 0.6034001087952124.
+[I 2026-03-24 20:22:59,579] Trial 3 finished with value: 0.6026857023433528 and parameters: {'n_estimators': 640, 'learning_rate': 0.03155055309066291, 'num_leaves': 130, 'max_depth': 10, 'reg_lambda': 0.001000098194887496}. Best is trial 0 with value: 0.6034001087952124.
+[I 2026-03-24 20:27:48,770] Trial 4 finished with value: 0.6040316131970511 and parameters: {'n_estimators': 601, 'learning_rate': 0.023485483569305292, 'num_leaves': 125, 'max_depth': 12, 'reg_lambda': 0.004800432347962086}. Best is trial 4 with value: 0.6040316131970511.
+[I 2026-03-24 20:28:26,072] Trial 5 finished with value: 0.5933912335236915 and parameters: {'n_estimators': 348, 'learning_rate': 0.07609500129310028, 'num_leaves': 36, 'max_depth': 5, 'reg_lambda': 0.9818451915071735}. Best is trial 4 with value: 0.6040316131970511.
+[I 2026-03-24 20:29:45,841] Trial 6 finished with value: 0.5948435061522857 and parameters: {'n_estimators': 683, 'learning_rate': 0.07734487511876648, 'num_leaves': 34, 'max_depth': 6, 'reg_lambda': 0.28878384242127086}. Best is trial 4 with value: 0.6040316131970511.
+[I 2026-03-24 20:31:25,775] Trial 7 finished with value: 0.5969390890665396 and parameters: {'n_estimators': 680, 'learning_rate': 0.053164530714351475, 'num_leaves': 148, 'max_depth': 6, 'reg_lambda': 0.19827997880534054}. Best is trial 4 with value: 0.6040316131970511.
+[I 2026-03-24 20:32:06,142] Trial 8 finished with value: 0.5947689292942469 and parameters: {'n_estimators': 681, 'learning_rate': 0.1688471048467461, 'num_leaves': 76, 'max_depth': 4, 'reg_lambda': 3.7841059339997574}. Best is trial 4 with value: 0.6040316131970511.
+[I 2026-03-24 20:34:05,025] Trial 9 finished with value: 0.5993404253912133 and parameters: {'n_estimators': 702, 'learning_rate': 0.022065258192936248, 'num_leaves': 50, 'max_depth': 8, 'reg_lambda': 0.009878922582600376}. Best is trial 4 with value: 0.6040316131970511.
+LightGBM Optimal Threshold: 0.498
+LightGBM Sınıflandırma Raporu:
+              precision    recall  f1-score   support
+
+           0       0.90      0.77      0.83      9751
+           1       0.52      0.74      0.61      3287
+
+    accuracy                           0.77     13038
+   macro avg       0.71      0.76      0.72     13038
+weighted avg       0.80      0.77      0.78     13038
+
+
+==================================================
+ TABNET (DEEP LEARNING) OPTİMİZASYONU VE EĞİTİMİ BAŞLIYOR
+==================================================
+[I 2026-03-24 20:35:01,906] A new study created in memory with name: no-name-3a48a309-7399-4fe1-92e3-0e1a2e6a4371
+
+Early stopping occurred at epoch 15 with best_epoch = 5 and best_val_0_logloss = 0.63307
+
+Early stopping occurred at epoch 13 with best_epoch = 3 and best_val_0_logloss = 0.62076
+
+Early stopping occurred at epoch 11 with best_epoch = 1 and best_val_0_logloss = 0.61988
+[I 2026-03-24 20:38:00,995] Trial 0 finished with value: 0.4250143329897364 and parameters: {'n_d': 9, 'gamma': 1.748478845765948, 'lr': 0.07279779628432842}. Best is trial 0 with value: 0.4250143329897364.
+
+Early stopping occurred at epoch 10 with best_epoch = 0 and best_val_0_logloss = 0.60446
+
+Early stopping occurred at epoch 13 with best_epoch = 3 and best_val_0_logloss = 0.6118
+
+Early stopping occurred at epoch 12 with best_epoch = 2 and best_val_0_logloss = 0.59506
+[I 2026-03-24 20:40:34,485] Trial 1 finished with value: 0.336496744140702 and parameters: {'n_d': 41, 'gamma': 1.0378165503754593, 'lr': 0.09191748906205127}. Best is trial 0 with value: 0.4250143329897364.
+
+Early stopping occurred at epoch 15 with best_epoch = 5 and best_val_0_logloss = 0.61101
+
+Early stopping occurred at epoch 12 with best_epoch = 2 and best_val_0_logloss = 0.59641
+
+Early stopping occurred at epoch 14 with best_epoch = 4 and best_val_0_logloss = 0.58666
+[I 2026-03-24 20:45:07,885] Trial 2 finished with value: 0.44239586617568505 and parameters: {'n_d': 58, 'gamma': 1.4327541995502622, 'lr': 0.027744452337139368}. Best is trial 2 with value: 0.44239586617568505.
+
+Early stopping occurred at epoch 10 with best_epoch = 0 and best_val_0_logloss = 0.63549
+
+Early stopping occurred at epoch 10 with best_epoch = 0 and best_val_0_logloss = 0.63749
+
+Early stopping occurred at epoch 12 with best_epoch = 2 and best_val_0_logloss = 0.63701
+[I 2026-03-24 20:51:39,574] Trial 3 finished with value: 0.4088863563232656 and parameters: {'n_d': 16, 'gamma': 1.1454047569828494, 'lr': 0.06406361384162608}. Best is trial 2 with value: 0.44239586617568505.
+
+Early stopping occurred at epoch 12 with best_epoch = 2 and best_val_0_logloss = 0.60855
+
+Early stopping occurred at epoch 18 with best_epoch = 8 and best_val_0_logloss = 0.60719
+
+Early stopping occurred at epoch 11 with best_epoch = 1 and best_val_0_logloss = 0.64904
+[I 2026-03-24 20:59:34,578] Trial 4 finished with value: 0.4020425971403588 and parameters: {'n_d': 34, 'gamma': 1.7161228515005296, 'lr': 0.0150636761214526}. Best is trial 2 with value: 0.44239586617568505.
+En iyi TabNet modeli eğitiliyor...
+epoch 0  | loss: 0.73041 | val_0_logloss: 0.64226 | val_0_auc: 0.6253  |  0:00:05s
+epoch 1  | loss: 0.64613 | val_0_logloss: 0.63767 | val_0_auc: 0.65609 |  0:00:10s
+epoch 2  | loss: 0.62201 | val_0_logloss: 0.61032 | val_0_auc: 0.68029 |  0:00:16s
+epoch 3  | loss: 0.58662 | val_0_logloss: 0.59972 | val_0_auc: 0.70744 |  0:00:21s
+epoch 4  | loss: 0.53336 | val_0_logloss: 0.66736 | val_0_auc: 0.7053  |  0:00:27s
+epoch 5  | loss: 0.48882 | val_0_logloss: 0.68318 | val_0_auc: 0.69624 |  0:00:32s
+epoch 6  | loss: 0.43135 | val_0_logloss: 0.68254 | val_0_auc: 0.6942  |  0:00:38s
+epoch 7  | loss: 0.3852  | val_0_logloss: 0.81066 | val_0_auc: 0.66394 |  0:00:43s
+epoch 8  | loss: 0.36238 | val_0_logloss: 0.90577 | val_0_auc: 0.65371 |  0:00:48s
+epoch 9  | loss: 0.33    | val_0_logloss: 0.94602 | val_0_auc: 0.63294 |  0:00:54s
+epoch 10 | loss: 0.28998 | val_0_logloss: 0.89688 | val_0_auc: 0.65026 |  0:00:59s
+epoch 11 | loss: 0.26152 | val_0_logloss: 0.99756 | val_0_auc: 0.62828 |  0:01:04s
+epoch 12 | loss: 0.25644 | val_0_logloss: 0.97955 | val_0_auc: 0.62937 |  0:01:10s
+epoch 13 | loss: 0.22943 | val_0_logloss: 0.93951 | val_0_auc: 0.64782 |  0:01:15s
+epoch 14 | loss: 0.21313 | val_0_logloss: 1.01326 | val_0_auc: 0.61975 |  0:01:21s
+epoch 15 | loss: 0.20383 | val_0_logloss: 0.93536 | val_0_auc: 0.63667 |  0:01:26s
+epoch 16 | loss: 0.18883 | val_0_logloss: 1.32018 | val_0_auc: 0.60006 |  0:01:31s
+epoch 17 | loss: 0.18094 | val_0_logloss: 1.20408 | val_0_auc: 0.59904 |  0:01:37s
+epoch 18 | loss: 0.17266 | val_0_logloss: 1.14933 | val_0_auc: 0.6307  |  0:01:42s
+epoch 19 | loss: 0.16654 | val_0_logloss: 1.07782 | val_0_auc: 0.62292 |  0:01:47s
+epoch 20 | loss: 0.15687 | val_0_logloss: 1.29191 | val_0_auc: 0.59845 |  0:01:53s
+epoch 21 | loss: 0.15115 | val_0_logloss: 1.44508 | val_0_auc: 0.60759 |  0:01:58s
+epoch 22 | loss: 0.14605 | val_0_logloss: 1.22562 | val_0_auc: 0.60942 |  0:02:04s
+epoch 23 | loss: 0.14551 | val_0_logloss: 1.13243 | val_0_auc: 0.62048 |  0:02:09s
+
+Early stopping occurred at epoch 23 with best_epoch = 3 and best_val_0_auc = 0.70744
+
+TabNet Optimal Threshold: 0.433
+TabNet Sınıflandırma Raporu:
+              precision    recall  f1-score   support
+
+           0       0.87      0.55      0.67      9751
+           1       0.36      0.76      0.49      3287
+
+    accuracy                           0.60     13038
+   macro avg       0.62      0.65      0.58     13038
+weighted avg       0.74      0.60      0.63     13038
+
+
+ROC karşılaştırma grafiği 'lgbm_vs_tabnet_roc.png' olarak kaydedildi.
+Successfully saved model at tabnet_gpu_model.zip
+Tüm modeller başarıyla kaydedildi.
+
+LightGBM için SHAP Analizi oluşturuluyor...
+SHAP grafiği kaydedildi. (shap_aciklanabilirlik_lightgbm.png)
