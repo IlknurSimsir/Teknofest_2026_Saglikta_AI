@@ -1,0 +1,49 @@
+>python training.py
+Veri yükleniyor...
+Optuna ile XGBoost (GPU) optimizasyonu başlatılıyor...
+[I 2026-03-24 17:28:28,312] A new study created in memory with name: no-name-d935ce51-62bf-4bd5-a503-e77a7a4c10cb
+[I 2026-03-24 17:28:37,871] Trial 0 finished with value: 0.5879083739971286 and parameters: {'n_estimators': 484, 'learning_rate': 0.03586252906110185, 'max_depth': 5, 'reg_lambda': 0.04482660380140399, 'subsample': 0.992551577017835, 'colsample_bytree': 0.7246350553675034}. Best is trial 0 with value: 0.5879083739971286.
+[I 2026-03-24 17:29:12,077] Trial 1 finished with value: 0.577482523893663 and parameters: {'n_estimators': 303, 'learning_rate': 0.10488880251468266, 'max_depth': 9, 'reg_lambda': 0.06642100916577881, 'subsample': 0.8136738120997247, 'colsample_bytree': 0.9862062244464268}. Best is trial 0 with value: 0.5879083739971286.
+[I 2026-03-24 17:29:45,037] Trial 2 finished with value: 0.5766265953149446 and parameters: {'n_estimators': 974, 'learning_rate': 0.014231973728836764, 'max_depth': 4, 'reg_lambda': 0.006649890264121983, 'subsample': 0.9686891372858614, 'colsample_bytree': 0.86182427626019}. Best is trial 0 with value: 0.5879083739971286.
+[I 2026-03-24 17:30:11,079] Trial 3 finished with value: 0.5661396781204245 and parameters: {'n_estimators': 653, 'learning_rate': 0.02665227049111787, 'max_depth': 3, 'reg_lambda': 0.0020586023570732127, 'subsample': 0.9649968377516487, 'colsample_bytree': 0.7576655572850708}. Best is trial 0 with value: 0.5879083739971286.
+[I 2026-03-24 17:31:19,895] Trial 4 finished with value: 0.596330425571533 and parameters: {'n_estimators': 826, 'learning_rate': 0.025538963448347468, 'max_depth': 9, 'reg_lambda': 0.8851472744143746, 'subsample': 0.7767481857303513, 'colsample_bytree': 0.6740853503228016}. Best is trial 4 with value: 0.596330425571533.
+[I 2026-03-24 17:31:30,066] Trial 5 finished with value: 0.5908797875382545 and parameters: {'n_estimators': 648, 'learning_rate': 0.019280125669696432, 'max_depth': 6, 'reg_lambda': 0.7085278776252378, 'subsample': 0.9508919506091682, 'colsample_bytree': 0.7119144703043631}. Best is trial 4 with value: 0.596330425571533.
+[I 2026-03-24 17:31:39,052] Trial 6 finished with value: 0.5889573516579285 and parameters: {'n_estimators': 395, 'learning_rate': 0.012250278749212687, 'max_depth': 7, 'reg_lambda': 0.03799730843945186, 'subsample': 0.6929046779445129, 'colsample_bytree': 0.7909590853075679}. Best is trial 4 with value: 0.596330425571533.
+[I 2026-03-24 17:31:48,380] Trial 7 finished with value: 0.5864643127355086 and parameters: {'n_estimators': 629, 'learning_rate': 0.02407222111495332, 'max_depth': 5, 'reg_lambda': 0.00231528255543425, 'subsample': 0.9865773951580292, 'colsample_bytree': 0.8689131068612288}. Best is trial 4 with value: 0.596330425571533.
+[I 2026-03-24 17:31:57,247] Trial 8 finished with value: 0.5888480887365526 and parameters: {'n_estimators': 840, 'learning_rate': 0.08010708966074735, 'max_depth': 4, 'reg_lambda': 0.01861811690272521, 'subsample': 0.6101167948667243, 'colsample_bytree': 0.636241147684505}. Best is trial 4 with value: 0.596330425571533.
+[I 2026-03-24 17:32:09,913] Trial 9 finished with value: 0.5947776787113496 and parameters: {'n_estimators': 601, 'learning_rate': 0.06692066924516576, 'max_depth': 7, 'reg_lambda': 0.15858175664228666, 'subsample': 0.8879772256650371, 'colsample_bytree': 0.6770141866764937}. Best is trial 4 with value: 0.596330425571533.
+[I 2026-03-24 17:32:40,958] Trial 10 finished with value: 0.5498473796600727 and parameters: {'n_estimators': 830, 'learning_rate': 0.16367651405581998, 'max_depth': 9, 'reg_lambda': 2.0155869239202184, 'subsample': 0.7435612342147349, 'colsample_bytree': 0.6011212547908144}. Best is trial 4 with value: 0.596330425571533.
+[I 2026-03-24 17:33:00,317] Trial 11 finished with value: 0.5874468834635431 and parameters: {'n_estimators': 740, 'learning_rate': 0.05836731998357453, 'max_depth': 8, 'reg_lambda': 0.442560737950158, 'subsample': 0.8582175992886515, 'colsample_bytree': 0.6779685433938906}. Best is trial 4 with value: 0.596330425571533.
+[I 2026-03-24 17:33:11,038] Trial 12 finished with value: 0.6008151558861836 and parameters: {'n_estimators': 526, 'learning_rate': 0.047009833115293144, 'max_depth': 7, 'reg_lambda': 9.500105153131555, 'subsample': 0.8778058459142644, 'colsample_bytree': 0.6620388197293905}. Best is trial 12 with value: 0.6008151558861836.
+[I 2026-03-24 17:33:25,105] Trial 13 finished with value: 0.6010064960816074 and parameters: {'n_estimators': 505, 'learning_rate': 0.04188922436772659, 'max_depth': 8, 'reg_lambda': 8.64572201237292, 'subsample': 0.7839253108067877, 'colsample_bytree': 0.601157363709953}. Best is trial 13 with value: 0.6010064960816074.
+[I 2026-03-24 17:33:35,054] Trial 14 finished with value: 0.6011091146937617 and parameters: {'n_estimators': 485, 'learning_rate': 0.042369556400689116, 'max_depth': 7, 'reg_lambda': 5.769876200879526, 'subsample': 0.8888763086367482, 'colsample_bytree': 0.61642492867502}. Best is trial 14 with value: 0.6011091146937617.
+En İyi Parametreler: {'n_estimators': 485, 'learning_rate': 0.042369556400689116, 'max_depth': 7, 'reg_lambda': 5.769876200879526, 'subsample': 0.8888763086367482, 'colsample_bytree': 0.61642492867502}
+En iyi XGBoost modeli GPU'da eğitiliyor...
+[0]     validation_0-logloss:0.68356
+[50]    validation_0-logloss:0.54499
+[100]   validation_0-logloss:0.52051
+[150]   validation_0-logloss:0.51076
+[200]   validation_0-logloss:0.50382
+[250]   validation_0-logloss:0.49965
+[300]   validation_0-logloss:0.49531
+[350]   validation_0-logloss:0.49069
+[400]   validation_0-logloss:0.48762
+[450]   validation_0-logloss:0.48439
+[484]   validation_0-logloss:0.48239
+
+Modelin F1 Skorunu Maksimize Eden Karar Eşiği (Threshold): 0.549
+
+--- Sınıflandırma Raporu ---
+              precision    recall  f1-score   support
+
+           0       0.89      0.80      0.84      9751
+           1       0.54      0.69      0.61      3287
+
+    accuracy                           0.77     13038
+   macro avg       0.71      0.75      0.72     13038
+weighted avg       0.80      0.77      0.78     13038
+
+Grafikler 'xgboost_degerlendirme_grafikleri.png' olarak kaydedildi.
+Model, Scaler ve Encoder başarıyla kaydedildi.
+SHAP Analizi Grafiği oluşturuluyor...
+SHAP grafiği kaydedildi. (shap_aciklanabilirlik_xgboost.png)
